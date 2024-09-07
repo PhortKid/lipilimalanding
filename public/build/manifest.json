@@ -1,0 +1,350 @@
+{
+  "_ApplicationLogo-C1E1gom4.js": {
+    "file": "assets/ApplicationLogo-C1E1gom4.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_AuthenticatedLayout-oZfZpfNl.js": {
+    "file": "assets/AuthenticatedLayout-oZfZpfNl.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_ApplicationLogo-C1E1gom4.js",
+      "_transition-Do0WtHpj.js"
+    ]
+  },
+  "_Futa-MQOWOoeR.js": {
+    "file": "assets/Futa-MQOWOoeR.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_Naviibar-ByJ5NfRh.js"
+    ]
+  },
+  "_GuestLayout-DpRuXLoc.js": {
+    "file": "assets/GuestLayout-DpRuXLoc.js",
+    "imports": [
+      "resources/js/app.jsx",
+      "_ApplicationLogo-C1E1gom4.js"
+    ]
+  },
+  "_InputLabel-BhUdxNcY.js": {
+    "file": "assets/InputLabel-BhUdxNcY.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_Naviibar-ByJ5NfRh.js": {
+    "file": "assets/Naviibar-ByJ5NfRh.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_PrimaryButton-CTTM5UMe.js": {
+    "file": "assets/PrimaryButton-CTTM5UMe.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_TextInput-BVbP0g0M.js": {
+    "file": "assets/TextInput-BVbP0g0M.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_transition-Do0WtHpj.js": {
+    "file": "assets/transition-Do0WtHpj.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "resources/js/Pages/Auth/ConfirmPassword.jsx": {
+    "file": "assets/ConfirmPassword-CRZMLNnU.js",
+    "src": "resources/js/Pages/Auth/ConfirmPassword.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_GuestLayout-DpRuXLoc.js",
+      "_TextInput-BVbP0g0M.js",
+      "_InputLabel-BhUdxNcY.js",
+      "_PrimaryButton-CTTM5UMe.js",
+      "_ApplicationLogo-C1E1gom4.js"
+    ]
+  },
+  "resources/js/Pages/Auth/ForgotPassword.jsx": {
+    "file": "assets/ForgotPassword-DSTOq1Cq.js",
+    "src": "resources/js/Pages/Auth/ForgotPassword.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_GuestLayout-DpRuXLoc.js",
+      "_TextInput-BVbP0g0M.js",
+      "_PrimaryButton-CTTM5UMe.js",
+      "_ApplicationLogo-C1E1gom4.js"
+    ]
+  },
+  "resources/js/Pages/Auth/Login.jsx": {
+    "file": "assets/Login-BFCcAYRh.js",
+    "src": "resources/js/Pages/Auth/Login.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_GuestLayout-DpRuXLoc.js",
+      "_TextInput-BVbP0g0M.js",
+      "_InputLabel-BhUdxNcY.js",
+      "_PrimaryButton-CTTM5UMe.js",
+      "_ApplicationLogo-C1E1gom4.js"
+    ]
+  },
+  "resources/js/Pages/Auth/Register.jsx": {
+    "file": "assets/Register-Zuqp7m-T.js",
+    "src": "resources/js/Pages/Auth/Register.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_GuestLayout-DpRuXLoc.js",
+      "_TextInput-BVbP0g0M.js",
+      "_InputLabel-BhUdxNcY.js",
+      "_PrimaryButton-CTTM5UMe.js",
+      "_ApplicationLogo-C1E1gom4.js"
+    ]
+  },
+  "resources/js/Pages/Auth/ResetPassword.jsx": {
+    "file": "assets/ResetPassword-xvchtorp.js",
+    "src": "resources/js/Pages/Auth/ResetPassword.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_GuestLayout-DpRuXLoc.js",
+      "_TextInput-BVbP0g0M.js",
+      "_InputLabel-BhUdxNcY.js",
+      "_PrimaryButton-CTTM5UMe.js",
+      "_ApplicationLogo-C1E1gom4.js"
+    ]
+  },
+  "resources/js/Pages/Auth/VerifyEmail.jsx": {
+    "file": "assets/VerifyEmail-CbcRm2tM.js",
+    "src": "resources/js/Pages/Auth/VerifyEmail.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_GuestLayout-DpRuXLoc.js",
+      "_PrimaryButton-CTTM5UMe.js",
+      "_ApplicationLogo-C1E1gom4.js"
+    ]
+  },
+  "resources/js/Pages/Book.jsx": {
+    "file": "assets/Book-D0uYH0LJ.js",
+    "src": "resources/js/Pages/Book.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_Naviibar-ByJ5NfRh.js",
+      "resources/js/Pages/Booking.jsx"
+    ]
+  },
+  "resources/js/Pages/Booking.jsx": {
+    "file": "assets/Booking-Btq4MpAk.js",
+    "src": "resources/js/Pages/Booking.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "resources/js/Pages/Contact.jsx": {
+    "file": "assets/Contact-BPiY9vjS.js",
+    "src": "resources/js/Pages/Contact.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_Futa-MQOWOoeR.js",
+      "_Naviibar-ByJ5NfRh.js",
+      "resources/js/Pages/ContactUs.jsx"
+    ]
+  },
+  "resources/js/Pages/ContactUs.jsx": {
+    "file": "assets/ContactUs-C2SL-gwZ.js",
+    "src": "resources/js/Pages/ContactUs.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "resources/js/Pages/Dashboard.jsx": {
+    "file": "assets/Dashboard-CpKgHWTP.js",
+    "src": "resources/js/Pages/Dashboard.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_AuthenticatedLayout-oZfZpfNl.js",
+      "_ApplicationLogo-C1E1gom4.js",
+      "_transition-Do0WtHpj.js"
+    ]
+  },
+  "resources/js/Pages/LoadingAnimation.jsx": {
+    "file": "assets/LoadingAnimation-vcu19xOa.js",
+    "src": "resources/js/Pages/LoadingAnimation.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "resources/js/Pages/Profile/Edit.jsx": {
+    "file": "assets/Edit-DFyiJna1.js",
+    "src": "resources/js/Pages/Profile/Edit.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_AuthenticatedLayout-oZfZpfNl.js",
+      "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx",
+      "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx",
+      "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx",
+      "_ApplicationLogo-C1E1gom4.js",
+      "_transition-Do0WtHpj.js",
+      "_TextInput-BVbP0g0M.js",
+      "_InputLabel-BhUdxNcY.js",
+      "_PrimaryButton-CTTM5UMe.js"
+    ]
+  },
+  "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx": {
+    "file": "assets/DeleteUserForm-BRaoOjh9.js",
+    "src": "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_TextInput-BVbP0g0M.js",
+      "_InputLabel-BhUdxNcY.js",
+      "_transition-Do0WtHpj.js"
+    ]
+  },
+  "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx": {
+    "file": "assets/UpdatePasswordForm-DMyXPFmH.js",
+    "src": "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_TextInput-BVbP0g0M.js",
+      "_InputLabel-BhUdxNcY.js",
+      "_PrimaryButton-CTTM5UMe.js",
+      "_transition-Do0WtHpj.js"
+    ]
+  },
+  "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx": {
+    "file": "assets/UpdateProfileInformationForm-BdLzABlw.js",
+    "src": "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_TextInput-BVbP0g0M.js",
+      "_InputLabel-BhUdxNcY.js",
+      "_PrimaryButton-CTTM5UMe.js",
+      "_transition-Do0WtHpj.js"
+    ]
+  },
+  "resources/js/Pages/Welcome.jsx": {
+    "file": "assets/Welcome-DoVGjdg1.js",
+    "src": "resources/js/Pages/Welcome.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_Naviibar-ByJ5NfRh.js",
+      "_Futa-MQOWOoeR.js"
+    ],
+    "css": [
+      "assets/Welcome-BgpYV0Yn.css"
+    ],
+    "assets": [
+      "assets/lipilima1-CpfDJfUp.jpg",
+      "assets/lipilima2-BivbjVhB.jpg",
+      "assets/lipilima3-D1fSnTZZ.jpg",
+      "assets/lipilima4-DRtaEalT.jpg",
+      "assets/lipilima5-Cgw8CFAX.jpg",
+      "assets/lipilima6-NXb4rTxe.jpg",
+      "assets/lipilima7-C5U1cbCS.jpg",
+      "assets/lipilima8-CKlrmVFZ.jpg",
+      "assets/lipilima9-fb0spDB7.jpg",
+      "assets/lipilima10-D_11g3Qp.jpg",
+      "assets/lipilima11-u5fDPndN.jpg",
+      "assets/lipilima12-nirHEGVP.jpg",
+      "assets/nosky-ebLo9cjI.png"
+    ]
+  },
+  "resources/js/app.jsx": {
+    "file": "assets/app-Uj-_xgAT.js",
+    "src": "resources/js/app.jsx",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/Pages/Auth/ConfirmPassword.jsx",
+      "resources/js/Pages/Auth/ForgotPassword.jsx",
+      "resources/js/Pages/Auth/Login.jsx",
+      "resources/js/Pages/Auth/Register.jsx",
+      "resources/js/Pages/Auth/ResetPassword.jsx",
+      "resources/js/Pages/Auth/VerifyEmail.jsx",
+      "resources/js/Pages/Book.jsx",
+      "resources/js/Pages/Booking.jsx",
+      "resources/js/Pages/Contact.jsx",
+      "resources/js/Pages/ContactUs.jsx",
+      "resources/js/Pages/Dashboard.jsx",
+      "resources/js/Pages/LoadingAnimation.jsx",
+      "resources/js/Pages/Profile/Edit.jsx",
+      "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx",
+      "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx",
+      "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx",
+      "resources/js/Pages/Welcome.jsx"
+    ],
+    "css": [
+      "assets/app-L7_izvLr.css"
+    ]
+  },
+  "resources/js/image/lipilima1.jpg": {
+    "file": "assets/lipilima1-CpfDJfUp.jpg",
+    "src": "resources/js/image/lipilima1.jpg"
+  },
+  "resources/js/image/lipilima10.jpg": {
+    "file": "assets/lipilima10-D_11g3Qp.jpg",
+    "src": "resources/js/image/lipilima10.jpg"
+  },
+  "resources/js/image/lipilima11.jpg": {
+    "file": "assets/lipilima11-u5fDPndN.jpg",
+    "src": "resources/js/image/lipilima11.jpg"
+  },
+  "resources/js/image/lipilima12.jpg": {
+    "file": "assets/lipilima12-nirHEGVP.jpg",
+    "src": "resources/js/image/lipilima12.jpg"
+  },
+  "resources/js/image/lipilima2.jpg": {
+    "file": "assets/lipilima2-BivbjVhB.jpg",
+    "src": "resources/js/image/lipilima2.jpg"
+  },
+  "resources/js/image/lipilima3.jpg": {
+    "file": "assets/lipilima3-D1fSnTZZ.jpg",
+    "src": "resources/js/image/lipilima3.jpg"
+  },
+  "resources/js/image/lipilima4.jpg": {
+    "file": "assets/lipilima4-DRtaEalT.jpg",
+    "src": "resources/js/image/lipilima4.jpg"
+  },
+  "resources/js/image/lipilima5.jpg": {
+    "file": "assets/lipilima5-Cgw8CFAX.jpg",
+    "src": "resources/js/image/lipilima5.jpg"
+  },
+  "resources/js/image/lipilima6.jpg": {
+    "file": "assets/lipilima6-NXb4rTxe.jpg",
+    "src": "resources/js/image/lipilima6.jpg"
+  },
+  "resources/js/image/lipilima7.jpg": {
+    "file": "assets/lipilima7-C5U1cbCS.jpg",
+    "src": "resources/js/image/lipilima7.jpg"
+  },
+  "resources/js/image/lipilima8.jpg": {
+    "file": "assets/lipilima8-CKlrmVFZ.jpg",
+    "src": "resources/js/image/lipilima8.jpg"
+  },
+  "resources/js/image/lipilima9.jpg": {
+    "file": "assets/lipilima9-fb0spDB7.jpg",
+    "src": "resources/js/image/lipilima9.jpg"
+  },
+  "resources/js/image/nosky.png": {
+    "file": "assets/nosky-ebLo9cjI.png",
+    "src": "resources/js/image/nosky.png"
+  }
+}

@@ -1,0 +1,1 @@
+import{j as t}from"./app-Uj-_xgAT.js";import{F as r}from"./Futa-MQOWOoeR.js";import{N as o}from"./Naviibar-ByJ5NfRh.js";import s from"./ContactUs-C2SL-gwZ.js";function x(){return t.jsxs(t.Fragment,{children:[t.jsx(o,{}),t.jsx(s,{}),t.jsx(r,{})]})}export{x as default};
