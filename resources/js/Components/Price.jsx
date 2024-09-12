@@ -113,7 +113,7 @@ const Price = () => {
                   : 'text-gray-500 hover:text-blue-500 hover:border-blue-500'
               }`}
             >
-              Executive Room
+               Deluxe Room
             </button>
           </li>
           <li className="mr-1">
@@ -125,7 +125,7 @@ const Price = () => {
                   : 'text-gray-500 hover:text-blue-500 hover:border-blue-500'
               }`}
             >
-             Deluxe Plan
+             Executive Room
             </button>
           </li>
         </ul>
@@ -145,7 +145,7 @@ const Price = () => {
         <TabContent
           id="standard"
           isActive={activeTab === 'standard'}
-          title=" Executive Room"
+          title="Deluxe room"
           description="maelezo kuhusu room type pamoja na detail zote zinazohitajika kwenye specific room"
           price="Tsh 100,000/day"
           image="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L24.jpg"
@@ -154,7 +154,7 @@ const Price = () => {
         <TabContent
           id="premium"
           isActive={activeTab === 'premium'}
-          title=" Deluxe room"
+          title="Executive Room"
           description="maelezo kuhusu room type pamoja na detail zote zinazohitajika kwenye specific room"
           price="Tsh 100,000/day"
           image="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L.jpg"

@@ -14,10 +14,12 @@ class StepTwoController extends Controller
            // Retrieve rooms from the session
     $rooms = session('rooms', []);
 
+    $check= session('check');
+
     // Convert array back to collection
     $rooms = collect($rooms);
 
-    return view('step2', compact('rooms'));
+    return view('step2', compact('rooms','check'));
     }
 
     /**

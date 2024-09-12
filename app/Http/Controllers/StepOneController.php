@@ -114,9 +114,28 @@ class StepOneController extends Controller
    // $rooms = Room::where('room_type', $roomType->cost)->get();
    $rooms = Room::where('room_type', $roomTypeName)->get();
 
+   if($roomTypeName=='standard')
+   {
+        $check=80000;
+        session()->put('check', $check);
+   }else if($roomTypeName=='executive'){
+
+    $check=100000;
+    session()->put('check', $check);
+   }else if($roomTypeName=='deluxe'){
+    $check=150000;
+    session()->put('check', $check);
+   }else{
+    echo "try again";
+   }
+
+
+   
+
+
     if ($rooms->isNotEmpty()) {
         // Redirect and pass the room data to the session
-        return redirect('step2_book')->with('rooms', $rooms->toArray());
+        return redirect('step2_book' )->with('rooms', $rooms->toArray())->with('check',$check);
     } else {
         return 'error';
         //redirect()->back()->withErrors('No rooms found for this room type.');

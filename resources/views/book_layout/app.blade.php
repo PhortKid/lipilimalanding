@@ -80,7 +80,7 @@
 
  
 
-<!-- step 1 -->
+<!-- step 1 
  <script>
         function showRoomImage() {
             // Hide all room images
@@ -96,6 +96,6 @@
                 document.getElementById(roomType + 'Image').style.display = 'block';
             }
         }
-    </script>
+    </script> -->
 </body>
 </html>
