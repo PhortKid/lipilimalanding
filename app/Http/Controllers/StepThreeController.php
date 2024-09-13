@@ -20,8 +20,9 @@ class StepThreeController extends Controller
            $room_number = session('room_number');
            $days_stayed = session('days_stayed');
            $number_of_guest = session('number_of_guest');
+           $total_amount = session('total_amount');
    
-           return view('step3', compact('checkin_date', 'checkout_date', 'room_number', 'days_stayed', 'number_of_guest'));
+           return view('step3', compact('checkin_date', 'checkout_date', 'room_number', 'days_stayed', 'number_of_guest','total_amount'));
       
     }
 
@@ -49,6 +50,7 @@ class StepThreeController extends Controller
             'number_of_days' => ['required'],
             'number_of_guest' => ['required'],
             'room_number' => ['required'],
+            'total_amount' => ['required'],
             
 
         ]);
@@ -63,11 +65,12 @@ class StepThreeController extends Controller
         $new_book->number_of_days=$request->input('number_of_days');
         $new_book->number_of_guest=$request->input('number_of_guest');
         $new_book->room_number=$request->input('room_number');
+        $new_book->total_amount=$request->input('total_amount');
         $new_book->save();
   
         Mail::to($new_book->email)->send(new Thanks());
         
-        return redirect('step3_book')->with('success','Book Created');
+        return redirect('step3_book')->with('success','Welcome to Lipilima Tower and Apartment');
     }
 
     /**

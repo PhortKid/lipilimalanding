@@ -41,6 +41,7 @@ class StepTwoController extends Controller
             'room_number' => ['required'],
             'days_stayed' => ['required'],
             'number_of_guest' => ['required'],
+            'total_amount' => ['required'],
 
         ]);
 
@@ -58,6 +59,7 @@ class StepTwoController extends Controller
         session()->put('room_number', $request->input('room_number'));
         session()->put('days_stayed', $request->input('days_stayed'));
         session()->put('number_of_guest', $request->input('number_of_guest'));
+        session()->put('total_amount', $request->input('total_amount'));
 
         return redirect('step3_book');
     

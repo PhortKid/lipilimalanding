@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('number_of_days');
             $table->string('number_of_guest');
             $table->string('room_number');
+            $table->string('total_amount');
             $table->string('is_marked')->default('no');
             $table->timestamps();
         });

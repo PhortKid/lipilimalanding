@@ -5,7 +5,7 @@ import React from 'react';
 const Map = () => {
   return (
     
-        <div className="w-full max-w-4xl p-4 bg-white shadow-lg rounded-lg">
+        <div className="w-full max-w-4xl px-2 bg-white shadow-lg rounded-lg">
           <h1 className="mb-4 text-4xl text-center  font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Location</h1>
           <div className="map-container">
             <iframe
