@@ -66,11 +66,13 @@ class StepThreeController extends Controller
         $new_book->number_of_guest=$request->input('number_of_guest');
         $new_book->room_number=$request->input('room_number');
         $new_book->total_amount=$request->input('total_amount');
+        $booking_id = rand(100000, 999999);
+        $new_book->booking_id=$booking_id;
         $new_book->save();
   
         Mail::to($new_book->email)->send(new Thanks());
         
-        return redirect('step3_book')->with('success','Welcome to Lipilima Tower and Apartment');
+        return redirect('step3_book')->with('success','Thank you for booking with us! Your reservation has been successfully processed  Booking Number: '.$booking_id);
     }
 
     /**

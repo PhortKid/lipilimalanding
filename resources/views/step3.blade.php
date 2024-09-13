@@ -143,8 +143,9 @@
                <input type="hidden" name="room_number" value="{{$room_number}}">
                <input type="hidden" name="number_of_days" value="{{$days_stayed}}">
                <input type="hidden" name="number_of_guest" value="{{$number_of_guest}}">
+               <input type="hidden" name="total_amount" value="{{$total_amount}}">
                <!-- Submit Button -->
-               <button type="submit" class="bg-blue-500 text-white py-3  px-3 rounded-lg">Book</button>
+               <button type="submit" id="book-button" class="bg-blue-500 text-white py-3  px-3 rounded-lg">Book</button>
             </form>
          </div>
       </div>
@@ -174,5 +175,38 @@
          });
       </script>
       <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+      <script>
+   document.addEventListener('DOMContentLoaded', function() {
+      const bookButton = document.getElementById('book-button');
+      bookButton.addEventListener('click', function() {
+         Swal.fire({
+            title: 'Are you sure?',
+            text: 'Do you want to proceed with the booking?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, book it!',
+            cancelButtonText: 'No, cancel',
+            reverseButtons: true
+         }).then((result) => {
+            if (result.isConfirmed) {
+               // Show loading state
+               Swal.fire({
+                  title: 'Processing...',
+                  text: 'Please wait a moment.',
+                  icon: 'info',
+                  allowOutsideClick: false,
+                  showConfirmButton: false
+               });
+
+               // Wait for 2 seconds before submitting the form
+               setTimeout(() => {
+                  document.getElementById('booking-form').submit();
+               }, 2000);
+            }
+         });
+      });
+   });
+</script>
+
    </body>
 </html>
