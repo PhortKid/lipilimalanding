@@ -134,7 +134,7 @@
                     </div>
                 </div>
                 <!-- Submit Button -->
-                <button type="submit" class="bg-blue-500 text-white py-2 px-5 rounded-lg">Proceed</button>
+                <button type="submit"  class="bg-blue-500 text-white py-2 px-5 rounded-lg">Proceed</button>
             </form>
         </div>
     </div>
@@ -215,6 +215,10 @@
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
+
+
+ 
 </body>
 </html>
 

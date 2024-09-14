@@ -41,6 +41,39 @@
          height: 100%;
          object-fit: cover; /* Ensures the image covers the circle */
          }
+         .custom-confirm-button {
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .custom-cancel-button {
+        background-color: #f44336; /* Red background */
+        color: white; /* White text */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .swal2-popup {
+        font-size: 16px; /* Adjust as needed */
+    }
+
+
+    .custom-ok-button {
+        background-color: #007bff; /* Blue background */
+        color: white; /* White text */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+  
+
       </style>
       <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
       <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -157,7 +190,10 @@
                  title: 'Success!',
                  text: '{{ session('success') }}',
                  icon: 'success',
-                 confirmButtonText: 'OK'
+                 confirmButtonText: 'OK',
+                 customClass: {
+                    confirmButton: 'custom-ok-button' // Apply the custom class to the confirm button
+                }
              }).then((result) => {
                  if (result.isConfirmed) {
                      // Redirect or perform another action if needed
@@ -186,7 +222,11 @@
             showCancelButton: true,
             confirmButtonText: 'Yes, book it!',
             cancelButtonText: 'No, cancel',
-            reverseButtons: true
+            reverseButtons: true,
+            customClass: {
+                confirmButton: 'custom-confirm-button',
+                cancelButton: 'custom-cancel-button'
+            }
          }).then((result) => {
             if (result.isConfirmed) {
                // Show loading state
@@ -195,7 +235,10 @@
                   text: 'Please wait a moment.',
                   icon: 'info',
                   allowOutsideClick: false,
-                  showConfirmButton: false
+                  showConfirmButton: false,
+                  customClass: {
+                      container: 'custom-loading-container'
+                  }
                });
 
                // Wait for 2 seconds before submitting the form
@@ -207,6 +250,5 @@
       });
    });
 </script>
-
    </body>
 </html>
