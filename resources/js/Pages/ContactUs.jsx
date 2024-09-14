@@ -1,6 +1,10 @@
 export default function ContactUs()
 {
 
+    const handleClick = () => {
+        alert("Thanks!");
+      };
+
 	return(
 		<>
     <section className="py-24">
@@ -14,7 +18,7 @@ export default function ContactUs()
                         <input type="text" className="w-full h-14 shadow-sm text-gray-600 placeholder-text-400 text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none py-2 px-4 mb-8" placeholder="Name"/>
                         <input type="email" className="w-full h-14 shadow-sm text-gray-600 placeholder-text-400 text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none py-2 px-4 mb-8" placeholder="Email"/>
                         <textarea name="" id="text" className="w-full h-48 shadow-sm resize-none text-gray-600 placeholder-text-400 text-lg font-normal leading-7 rounded-2xl border border-gray-200 focus:outline-none px-4 py-4 mb-8" placeholder="Message"></textarea>
-                    <button className="w-full h-12 text-center text-white text-base font-semibold leading-6 rounded-full bg-indigo-600 shadow transition-all duration-700 hover:bg-indigo-800" onClick={alert("Thanks ")}>Submit</button>
+                    <button className="w-full h-12 text-center text-white text-base font-semibold leading-6 rounded-full bg-indigo-600 shadow transition-all duration-700 hover:bg-indigo-800" onClick={handleClick}>Submit</button>
                     </form>
                 </div>
             </div>
