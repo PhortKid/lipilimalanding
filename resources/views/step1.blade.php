@@ -121,7 +121,7 @@
                     <option value="" selected disabled>Select a Room Type</option>
                     <option value="standard">Standard Room - 80,000</option>
                     <option value="deluxe">Deluxe Room - 100,000</option>
-                    <option value="suite">Executive - 150,000</option>
+                    <option value="executive">Executive - 150,000</option>
                 </select>
             </div>
             <div class="room-images">
