@@ -22,7 +22,7 @@ export default function Naviibar() {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href="/" active className="hover:-translate-y-1 hover:scale-110 duration-300 ">
+        <Navbar.Link href="/"  className="hover:-translate-y-1 hover:scale-110 duration-300 ">
           Home
         </Navbar.Link>
         <Navbar.Link  href="/start_book" className="hover:-translate-y-1 hover:scale-110 duration-300 ">
