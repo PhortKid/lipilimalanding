@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Room Booking</title>
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
       background-image: url('http://127.0.0.1:8000/picture/L2.jpg');
@@ -149,6 +150,56 @@
                     <img src="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L3_4.jpg" alt="Suite Room 4">
                 </div>
             </div>
+
+            <!-- START -->
+            <div class="container mx-auto p-4">
+        <ul>
+           <H3 class="text-3xl">Services</H3>
+            <li class='flex items-center space-x-3'>
+                <span class="text-gray-950 flex items-center text-sm">
+                <i class="fa-solid fa-check text-green-600"></i>
+                    Free Wifi
+                    <i class="fa-solid fa-wifi ml-2 text-gray-950"></i>
+                </span>
+            </li>
+            <li class='flex items-center space-x-3'>
+                <span class="text-gray-950 flex items-center text-sm">
+                <i class="fa-solid fa-check text-green-600"></i>
+                    Breakfast
+                    <i class="fa-solid fa-mug-saucer"></i>
+                </span>
+            </li>
+            <li class='flex items-center space-x-3'>
+                <span class="text-gray-950 flex items-center text-sm">
+                <i class="fa-solid fa-check text-green-600"></i>
+                    Parking
+                    <i class="fa-solid fa-car ml-2 text-gray-950"></i>
+                </span>
+            </li>
+            <li class='flex items-center space-x-3'>
+                <span class="text-gray-950 flex items-center text-sm">
+                <i class="fa-solid fa-check text-green-600"></i>
+                    Apartment
+                    <i class="fa-solid fa-building ml-2 text-gray-950"></i>
+                </span>
+            </li>
+            <li class='flex items-center space-x-3'>
+                <span class="text-gray-950 flex items-center text-sm">
+                <i class="fa-solid fa-check text-green-600"></i>
+                    Bathroom
+                    <i class="fa-solid fa-bath ml-2 text-gray-950"></i>
+                </span>
+            </li>
+            <li class='flex items-center space-x-3'>
+                <span class="text-gray-950 flex items-center text-sm">
+                <i class="fa-solid fa-check text-green-600"></i>
+                    Kitchen
+                    <i class="fa-solid fa-utensils ml-2 text-gray-950"></i>
+                </span>
+            </li>
+        </ul>
+    </div>
+    <!-- END -->
             <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg mt-4">Proceed</button>
         </div>
     </form>

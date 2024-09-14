@@ -27,13 +27,6 @@ const TabContent = ({ id, isActive, title, description, price, image }) => {
                         <span className="text-gray-950 flex items-center text-sm" >
                           Free Wifi
                           <FaWifi className="ml-2 text-gray-950" />
-                         {/*} <faParking className="ml-2 text-gray-950" />
-                         <faBalcony className="ml-2 text-gray-950" />
-                          <faKitchenSet className="ml-2 text-gray-950" />
-                          <faTerrace className="ml-2 text-gray-950" />
-                          <faWashingMachine className="ml-2 text-gray-950" />
-
-                          <faBath className="ml-2 text-gray-950" /> */}
                         </span>
                       
             </li>
