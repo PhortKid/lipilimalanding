@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 15, 2024 at 03:41 PM
+-- Generation Time: Sep 15, 2024 at 05:44 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -149,7 +149,11 @@ CREATE TABLE `guest` (
   `arriving_from` varchar(191) NOT NULL,
   `email` varchar(191) DEFAULT NULL,
   `phone_number` varchar(191) DEFAULT NULL,
-  `id_or_passport_number` varchar(191) DEFAULT NULL,
+  `purpose_of_visit` varchar(191) DEFAULT NULL,
+  `id_type` varchar(191) DEFAULT NULL,
+  `id_number` varchar(191) DEFAULT NULL,
+  `id_issuing_authority` varchar(191) DEFAULT NULL,
+  `id_expiration_date` varchar(191) DEFAULT NULL,
   `next_of_kin_name` varchar(191) DEFAULT NULL,
   `next_of_kin_phone_number` varchar(191) DEFAULT NULL,
   `gender` enum('male','female') NOT NULL,
@@ -222,8 +226,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (20, '2024_08_29_103322_create_budgets_table', 12),
 (21, '2024_08_29_103535_create_budget_allocations_table', 12),
 (23, '2019_12_14_000001_create_personal_access_tokens_table', 13),
-(25, '2024_08_20_161754_create_guest_table', 14),
-(27, '2024_09_03_163652_create_online_booking_table', 15);
+(27, '2024_09_03_163652_create_online_booking_table', 15),
+(29, '2024_08_20_161754_create_guest_table', 16);
 
 -- --------------------------------------------------------
 
@@ -382,8 +386,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('0Y12vmoUeBkfcsYHZfxowEoYXegnVzVQS6qjB0tg', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUUtiVEdpejlQT3VDM0UwY0hwcjVqRkFiUnA2MWo5VWNvbVlzQkJiTCI7czoxODoiZmxhc2hlcjo6ZW52ZWxvcGVzIjthOjA6e31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjI2OiJodHRwOi8vMTI3LjAuMC4xOjgwODAvZGFzaCI7fX0=', 1726404452),
-('TdZuHqUXMAqVYuZPZ19thDX3CeWjeCQvgmmtEIPW', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiV0s4WUdCbWFCN1k3WklDSTlpQW5RdmdNaFBSVjVGdHRlbzRUZnhJRSI7czoxODoiZmxhc2hlcjo6ZW52ZWxvcGVzIjthOjA6e31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czo0MzoiaHR0cDovLzEyNy4wLjAuMTo4MDgwL2Rhc2gvZ3Vlc3RfbWFuYWdlbWVudCI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1726301272);
+('TdZuHqUXMAqVYuZPZ19thDX3CeWjeCQvgmmtEIPW', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiV0s4WUdCbWFCN1k3WklDSTlpQW5RdmdNaFBSVjVGdHRlbzRUZnhJRSI7czoxODoiZmxhc2hlcjo6ZW52ZWxvcGVzIjthOjA6e31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czo0MzoiaHR0cDovLzEyNy4wLjAuMTo4MDgwL2Rhc2gvZ3Vlc3RfbWFuYWdlbWVudCI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1726301272),
+('Xlt74LAAWt8IsaCC9OpzmuW1Ursepk4je1g70UwQ', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiVFVDUWdvd1N2b01JTFk2T0RWc3BGeE1uZzRFR0RKNnBkS01SM0twciI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxODoiZmxhc2hlcjo6ZW52ZWxvcGVzIjthOjE6e2k6MDtPOjM1OiJGbGFzaGVyXFByaW1lXE5vdGlmaWNhdGlvblxFbnZlbG9wZSI6Mjp7czo0MzoiAEZsYXNoZXJcUHJpbWVcTm90aWZpY2F0aW9uXEVudmVsb3BlAHN0YW1wcyI7YTo2OntzOjMxOiJGbGFzaGVyXFByaW1lXFN0YW1wXFBsdWdpblN0YW1wIjtPOjMxOiJGbGFzaGVyXFByaW1lXFN0YW1wXFBsdWdpblN0YW1wIjoxOntzOjM5OiIARmxhc2hlclxQcmltZVxTdGFtcFxQbHVnaW5TdGFtcABwbHVnaW4iO3M6NzoiZmxhc2hlciI7fXM6MzQ6IkZsYXNoZXJcUHJpbWVcU3RhbXBcQ3JlYXRlZEF0U3RhbXAiO086MzQ6IkZsYXNoZXJcUHJpbWVcU3RhbXBcQ3JlYXRlZEF0U3RhbXAiOjI6e3M6NDU6IgBGbGFzaGVyXFByaW1lXFN0YW1wXENyZWF0ZWRBdFN0YW1wAGNyZWF0ZWRBdCI7TzoxNzoiRGF0ZVRpbWVJbW11dGFibGUiOjM6e3M6NDoiZGF0ZSI7czoyNjoiMjAyNC0wOS0xNSAxNTo0NDowNi41NjI0NzQiO3M6MTM6InRpbWV6b25lX3R5cGUiO2k6MztzOjg6InRpbWV6b25lIjtzOjM6IlVUQyI7fXM6NDI6IgBGbGFzaGVyXFByaW1lXFN0YW1wXENyZWF0ZWRBdFN0YW1wAGZvcm1hdCI7czoxMToiWS1tLWQgSDppOnMiO31zOjI3OiJGbGFzaGVyXFByaW1lXFN0YW1wXElkU3RhbXAiO086Mjc6IkZsYXNoZXJcUHJpbWVcU3RhbXBcSWRTdGFtcCI6MTp7czozMToiAEZsYXNoZXJcUHJpbWVcU3RhbXBcSWRTdGFtcABpZCI7czozMjoiNzI3OTBiZWNmY2Y5M2FiNWU4YjY5MjQ1ZGY2YTE5OTIiO31zOjMwOiJGbGFzaGVyXFByaW1lXFN0YW1wXERlbGF5U3RhbXAiO086MzA6IkZsYXNoZXJcUHJpbWVcU3RhbXBcRGVsYXlTdGFtcCI6MTp7czozNzoiAEZsYXNoZXJcUHJpbWVcU3RhbXBcRGVsYXlTdGFtcABkZWxheSI7aTowO31zOjI5OiJGbGFzaGVyXFByaW1lXFN0YW1wXEhvcHNTdGFtcCI7TzoyOToiRmxhc2hlclxQcmltZVxTdGFtcFxIb3BzU3RhbXAiOjE6e3M6Mzc6IgBGbGFzaGVyXFByaW1lXFN0YW1wXEhvcHNTdGFtcABhbW91bnQiO2k6MTt9czozMzoiRmxhc2hlclxQcmltZVxTdGFtcFxQcmlvcml0eVN0YW1wIjtPOjMzOiJGbGFzaGVyXFByaW1lXFN0YW1wXFByaW9yaXR5U3RhbXAiOjE6e3M6NDM6IgBGbGFzaGVyXFByaW1lXFN0YW1wXFByaW9yaXR5U3RhbXAAcHJpb3JpdHkiO2k6MDt9fXM6NDk6IgBGbGFzaGVyXFByaW1lXE5vdGlmaWNhdGlvblxFbnZlbG9wZQBub3RpZmljYXRpb24iO086Mzk6IkZsYXNoZXJcUHJpbWVcTm90aWZpY2F0aW9uXE5vdGlmaWNhdGlvbiI6NDp7czo0NjoiAEZsYXNoZXJcUHJpbWVcTm90aWZpY2F0aW9uXE5vdGlmaWNhdGlvbgB0aXRsZSI7czowOiIiO3M6NDg6IgBGbGFzaGVyXFByaW1lXE5vdGlmaWNhdGlvblxOb3RpZmljYXRpb24AbWVzc2FnZSI7czoxMzoiR3Vlc3QgRGVsZXRlZCI7czo0NToiAEZsYXNoZXJcUHJpbWVcTm90aWZpY2F0aW9uXE5vdGlmaWNhdGlvbgB0eXBlIjtzOjc6InN1Y2Nlc3MiO3M6NDg6IgBGbGFzaGVyXFByaW1lXE5vdGlmaWNhdGlvblxOb3RpZmljYXRpb24Ab3B0aW9ucyI7YTowOnt9fX19czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDM6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoL2d1ZXN0X21hbmFnZW1lbnQiO31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1726415046);
 
 -- --------------------------------------------------------
 
@@ -429,7 +433,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `middlename`, `lastname`, `phone_number`, `profile_image`, `email`, `gender`, `email_verified_at`, `role`, `password`, `status`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Phort', NULL, 'Chrispin', '0787753939', '1724088548.jpeg', 'middlephort@gmail.com', 'Male', NULL, 'Admin', '$2y$12$3rZSnBj0XwKuWAAUz1S/OOdNOzztTUBGVrPeivJSqWAPuZzc1gs12', 'active', 'qVeU1b12LKcxbgKEeTv39fjkB4C3Vegr5u3FkVyufRNdRjcNpgJQnAhvfFCm', '2024-08-19 10:26:43', '2024-09-14 04:22:27');
+(1, 'Phort', NULL, 'Chrispin', '0787753939', '1724088548.jpeg', 'middlephort@gmail.com', 'Male', NULL, 'Admin', '$2y$12$3rZSnBj0XwKuWAAUz1S/OOdNOzztTUBGVrPeivJSqWAPuZzc1gs12', 'active', 'qgRPDBxmmUNI1vQ26wpBYaAODZr4NoWj05fu2zbBrgeQAYihgbWHMDBVT2l4', '2024-08-19 10:26:43', '2024-09-14 04:22:27');
 
 --
 -- Indexes for dumped tables
@@ -612,7 +616,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `guest`
 --
 ALTER TABLE `guest`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `jobs`
@@ -624,7 +628,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `online_booking`
