@@ -4,6 +4,13 @@ import { FaWifi,FaCoffee ,FaParking } from 'react-icons/fa';
 import { PiBuildingApartmentFill } from "react-icons/pi";
 import { MdOutlineBathroom } from "react-icons/md";
 import { FaKitchenSet } from "react-icons/fa6";
+
+import standard from "./../image/plan/standard.jpg";
+import deluxe from "./../image/plan/deluxe.jpg";
+import executive from "./../image/plan/executive.jpg";
+
+
+
 //import { faParking, faBroom, faKitchenSet, faBalcony, faWashingMachine, faBath } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -130,27 +137,27 @@ const Price = () => {
           id="basic"
           isActive={activeTab === 'basic'}
           title="Standard Room"
-          description="maelezo kuhusu room type pamoja na detail zote zinazohitajika kwenye specific room"
+          description=".."
           price="Tsh 100,000/day"
-          image="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L1.jpg"
+          image={standard}
         />
 
         <TabContent
           id="standard"
           isActive={activeTab === 'standard'}
           title="Deluxe room"
-          description="maelezo kuhusu room type pamoja na detail zote zinazohitajika kwenye specific room"
+          description=".."
           price="Tsh 100,000/day"
-          image="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L24.jpg"
+          image={deluxe}
         />
 
         <TabContent
           id="premium"
           isActive={activeTab === 'premium'}
           title="Executive Room"
-          description="maelezo kuhusu room type pamoja na detail zote zinazohitajika kwenye specific room"
-          price="Tsh 100,000/day"
-          image="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L.jpg"
+          description=".."
+          price="Tsh 150,000/day"
+          image={executive}
         />
       </div>
     </div>

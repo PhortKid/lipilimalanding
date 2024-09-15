@@ -3,6 +3,7 @@ import { Navbar ,Button} from "flowbite-react";
 //import { Outlet} from "react-router-dom";
 //import Futa from "./Component/Futa";
 import { Avatar } from "flowbite-react";
+import logo from './../image/logo/logo.jpeg';
 
 
 
@@ -12,7 +13,7 @@ export default function Naviibar() {
     <>
     <Navbar fluid >
       <Navbar.Brand  href="#">
-      <Avatar img="https://www.lipilimatower.co.tz/assets/images/logo.jpg"  rounded bordered />
+      <Avatar img={logo}  rounded bordered />
       {/* animate-wave  */}
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white animate-wave  text-gray-900"> LIPILIMA TOWER </span>
       </Navbar.Brand>

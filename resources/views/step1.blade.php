@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
-      background-image: url('http://127.0.0.1:8000/picture/L2.jpg');
+      background-image: url('{{asset('picture/L2.jpg')}}');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -70,8 +70,8 @@
 
 <nav class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 ">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="https://www.lipilimatower.co.tz/assets/images/logo.jpg" class="h-8" alt="Flowbite Logo">
+  <a href="https://www.lipilimatower.co.tz" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="{{asset('logo.jpeg')}}" class="h-8" alt="lipilima logo">
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-blacke">Lipilima Tower</span>
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -107,7 +107,7 @@
     <!-- Logo Section -->
     <div class="logo-container">
         <div class="logo">
-            <img src="https://www.lipilimatower.co.tz/assets/images/logo.jpg" alt="Logo">
+            <img src="{{asset('logo.jpeg')}}" alt="Logo">
         </div>
     </div>
 
@@ -128,26 +128,26 @@
             <div class="room-images">
                 <!-- Standard Room Images -->
                 <div id="standardImages" class="room-image-group">
-                    <img src="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L1.jpg" class="w-auto"  alt="Standard Room 1">
-                    <img src="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L1.jpg" class="w-auto" alt="Standard Room 2">
-                    <img src="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L1.jpg" class="w-auto" alt="Standard Room 3">
-                    <img src="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L1.jpg" class="w-auto" alt="Standard Room 4">
+                    <img src="{{asset('room_type/standard1.jpg')}}" class="w-auto"  alt="Standard Room 1">
+                    <img src="{{asset('room_type/standard2.jpg')}}" class="w-auto" alt="Standard Room 2">
+                    <img src="{{asset('room_type/standard3.jpg')}}" class="w-auto" alt="Standard Room 3">
+                    <img src="{{asset('room_type/standard4.jpg')}}" class="w-auto" alt="Standard Room 4">
                 </div>
 
                 <!-- Deluxe Room Images -->
                 <div id="deluxeImages" class="room-image-group">
-                    <img src="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L22_1.jpg" alt="Deluxe Room 1">
-                    <img src="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L22_2.jpg" alt="Deluxe Room 2">
-                    <img src="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L22_3.jpg" alt="Deluxe Room 3">
-                    <img src="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L22_4.jpg" alt="Deluxe Room 4">
+                    <img src="{{asset('room_type/deluxe1.jpg')}}" alt="Deluxe Room 1">
+                    <img src="{{asset('room_type/deluxe2.jpg')}}" alt="Deluxe Room 2">
+                    <img src="{{asset('room_type/deluxe3.jpg')}}" alt="Deluxe Room 3">
+                    <img src="{{asset('room_type/deluxe4.jpg')}}" alt="Deluxe Room 4">
                 </div>
 
                 <!-- Suite Room Images -->
-                <div id="suiteImages" class="room-image-group">
-                    <img src="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L3_1.jpg" alt="Suite Room 1">
-                    <img src="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L3_2.jpg" alt="Suite Room 2">
-                    <img src="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L3_3.jpg" alt="Suite Room 3">
-                    <img src="https://lipilima.tehama.website/assets/img/banner/2024-05-20/L3_4.jpg" alt="Suite Room 4">
+                <div id="executiveImages" class="room-image-group">
+                    <img src="{{asset('room_type/executive1.jpg')}}" alt="Extended 1">
+                    <img src="{{asset('room_type/executive2.jpg')}}" alt="Extended 2">
+                    <img src="{{asset('room_type/executive3.jpg')}}" alt="Extended 3">
+                    <img src="{{asset('room_type/executive4.jpg')}}" alt="Extended 4">
                 </div>
             </div>
 

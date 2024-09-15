@@ -21,7 +21,7 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <img class="rounded-xl" src="https://www.lipilimatower.co.tz/assets/images/logo.jpg" alt="Apartment Logo">
+            <img class="rounded-xl" src="{{asset('logo.jpeg')}}" alt="Apartment Logo">
             <h1>Lipilima Tower And Apartment</h1>
         </div>
         

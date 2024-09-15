@@ -16,11 +16,12 @@ class Thanks extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public $booking_id;
+    public function __construct($booking_id)
     {
-        //
+        $this->booking_id= $booking_id;
+       
     }
-
     /**
      * Get the message envelope.
      */

@@ -7,7 +7,7 @@
       <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
       <style>
          body {
-         background-image: url('http://127.0.0.1:8000/picture/L2.jpg');
+         background-image: url('{{asset('picture/L2.jpg')}}');
          background-size: cover; /* Makes the image cover the entire background */
          background-repeat: no-repeat; /* Prevents the image from repeating */
          background-position: center; /* Centers the image */
@@ -99,12 +99,12 @@
       <div class="flex items-center justify-center min-h-screen  pt-36 ">
          <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-               <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-               <img src="https://www.lipilimatower.co.tz/assets/images/logo.jpg" class="h-8" alt="Flowbite Logo">
+               <a href="https://www.lipilimatower.co.tz" class="flex items-center space-x-3 rtl:space-x-reverse">
+               <img src="{{asset('logo.jpeg')}}" class="h-8" alt="lipilima logo">
                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Lipilima Tower</span>
                </a>
                <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                  <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
+                  <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Book</button>
                   <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
                      <span class="sr-only">Open main menu</span>
                      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -131,7 +131,7 @@
             <!-- Logo Section -->
             <div class="logo-container">
                <div class="logo">
-                  <img src="https://www.lipilimatower.co.tz/assets/images/logo.jpg" alt="Logo">
+                  <img src="{{asset('logo.jpeg')}}" alt="Logo">
                </div>
             </div>
             <form id="booking-form" action="{{route('step3_book.store')}}" method="POST">
@@ -212,10 +212,19 @@
       </script>
       <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
       <script>
-   document.addEventListener('DOMContentLoaded', function() {
-      const bookButton = document.getElementById('book-button');
-      bookButton.addEventListener('click', function() {
-         Swal.fire({
+  document.addEventListener('DOMContentLoaded', function() {
+    const bookButton = document.getElementById('book-button');
+
+    // Debugging: Ensure the button is correctly selected
+    if (!bookButton) {
+        console.error('Book button not found!');
+        return;
+    }
+
+    bookButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        Swal.fire({
             title: 'Are you sure?',
             text: 'Do you want to proceed with the booking?',
             icon: 'question',
@@ -227,28 +236,29 @@
                 confirmButton: 'custom-confirm-button',
                 cancelButton: 'custom-cancel-button'
             }
-         }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
-               // Show loading state
-               Swal.fire({
-                  title: 'Processing...',
-                  text: 'Please wait a moment.',
-                  icon: 'info',
-                  allowOutsideClick: false,
-                  showConfirmButton: false,
-                  customClass: {
-                      container: 'custom-loading-container'
-                  }
-               });
+                // Show loading state
+                Swal.fire({
+                    title: 'Processing...',
+                    text: 'Please wait a moment.',
+                    icon: 'info',
+                    allowOutsideClick: false,
+                    showConfirmButton: false,
+                    customClass: {
+                        container: 'custom-loading-container'
+                    }
+                });
 
-               // Wait for 2 seconds before submitting the form
-               setTimeout(() => {
-                  document.getElementById('booking-form').submit();
-               }, 2000);
+                // Wait for 2 seconds before submitting the form
+                setTimeout(() => {
+                    document.getElementById('booking-form').submit();
+                }, 2000);
             }
-         });
-      });
-   });
+        });
+    });
+});
+
 </script>
    </body>
 </html>

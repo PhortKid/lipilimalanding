@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
     <style>
         body {
-            background-image: url('http://127.0.0.1:8000/picture/L2.jpg');
+            background-image: url('{{asset('picture/L2.jpg')}}');
             background-size: cover; /* Makes the image cover the entire background */
             background-repeat: no-repeat; /* Prevents the image from repeating */
             background-position: center; /* Centers the image */
@@ -46,8 +46,8 @@
 <body>
     <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="https://www.lipilimatower.co.tz/assets/images/logo.jpg" class="h-8" alt="Flowbite Logo">
+            <a href="https://www.lipilimatower.co.tz" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="{{asset('logo.jpeg')}}" class="h-8" alt="lipilima logo">
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Lipilima Tower</span>
             </a>
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -79,7 +79,7 @@
             <!-- Logo Section -->
             <div class="logo-container">
                 <div class="logo">
-                    <img src="https://www.lipilimatower.co.tz/assets/images/logo.jpg" alt="Logo">
+                    <img src="{{asset('logo.jpeg')}}" alt="Logo">
                 </div>
             </div>
             <form id="booking-form" action="{{route('step2_book.store')}}" method="POST">
