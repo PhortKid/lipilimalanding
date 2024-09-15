@@ -1,4 +1,4 @@
-
+import nosky from  '../image/nosky.png';
 
 export default function ContactUs()
 {
@@ -6,6 +6,15 @@ export default function ContactUs()
     const handleClick = () => {
         alert("Thanks!");
       };
+
+      const style = {
+        backgroundImage: `url(${nosky})`, //
+      //  backgroundSize: 'cover', // Optional: cover the entire container
+      //  backgroundPosition: 'center', // Optional: center the image
+      //  height: '400px', // Adjust height as needed
+      //  width: '100%' // Adjust width as needed
+      };
+    
 
 	return(
 		<>
@@ -26,7 +35,7 @@ export default function ContactUs()
                     </form>
                 </div>
             </div>
-            <div className="lg:max-w-xl w-full h-[600px] flex items-center justify-center  bg-cover bg-no-repeat bg-[url('https://lipilima.tehama.website/assets/img/banner/2024-05-20/L2.jpg')] ">
+            <div className="lg:max-w-xl w-full h-[600px] flex items-center justify-center  bg-cover bg-no-repeat bg-[url({nosky})] " style={style}>
                 <div className="">
                     <div className="lg:w-96 w-auto h-auto bg-white shadow-xl lg:p-6 p-4">
                        
