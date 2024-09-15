@@ -21,7 +21,7 @@ class Thanks extends Mailable
 
     public function __construct($new_book)
     {
-        $this->$new_book;
+        $this->new_book=$new_book;
         
        
     }
