@@ -16,10 +16,13 @@ class Thanks extends Mailable
     /**
      * Create a new message instance.
      */
-    public $booking_id;
-    public function __construct($booking_id)
+ 
+    public $new_book;
+
+    public function __construct($new_book)
     {
-        $this->booking_id= $booking_id;
+        $this->$new_book;
+        
        
     }
     /**

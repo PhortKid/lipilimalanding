@@ -70,7 +70,7 @@ class StepThreeController extends Controller
         $new_book->booking_id=$booking_id;
         $new_book->save();
   
-        Mail::to($new_book->email)->send(new Thanks(($booking_id)));
+        Mail::to($new_book->email)->send(new Thanks(($new_book)));
         
         return redirect('step3_book')->with('success','Thank you for booking with us! Your reservation has been successfully processed  Booking Number: '.$booking_id);
     }

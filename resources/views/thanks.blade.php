@@ -27,8 +27,8 @@
         
         <!-- Content -->
         <div class="content">
-            <h2 style="font-size: 20px; color: #333333; text-align: center;">Thank You for Your Booking!</h2>
-            <p style="font-size: 16px; color: #555555; text-align: center;">Thank you for choosing us for your stay. At Lipilima Tower, we are committed to providing you with an exceptional experience. From our comfortable, well-appointed rooms to our attentive service, we aim to make your visit memorable and enjoyable.</p>
+            <h2 style="font-size: 20px; color: #333333; text-align: center;">Thank You {{$new_booking->firstname}} for Your Booking!</h2>
+            <p style="font-size: 16px; color: #555555; text-align: center;">Thank you for choosing us for your stay. At Lipilima Tower, we are committed to providing you with an exceptional experience. From our comfortable, well-appointed rooms to our attentive service, we aim to make your visit memorable and enjoyable. Your Booking ID is {{$new_book->booking_id}}</p>
 
           
         </div>
