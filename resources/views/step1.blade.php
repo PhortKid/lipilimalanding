@@ -120,9 +120,9 @@
                 <label class="block text-lg font-medium mb-2" for="roomType">Select Room Type then proceed below</label>
                 <select id="roomType" name="roomType" class="w-full border border-gray-300 rounded-lg p-2" onchange="showRoomImages()" required>
                     <option value="" selected disabled>Select a Room Type</option>
-                    <option value="standard">Standard Room - 80,000</option>
-                    <option value="deluxe">Deluxe Room - 100,000</option>
-                    <option value="executive">Executive - 150,000</option>
+                    <option value="standard">Standard Room </option>
+                    <option value="deluxe">Deluxe Room </option>
+                    <option value="executive">Executive </option>
                 </select>
             </div>
             <div class="room-images">

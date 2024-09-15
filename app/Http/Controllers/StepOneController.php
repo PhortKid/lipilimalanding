@@ -116,14 +116,14 @@ class StepOneController extends Controller
 
    if($roomTypeName=='standard')
    {
-        $check=80000;
+        $check=60000;
         session()->put('check', $check);
-   }else if($roomTypeName=='executive'){
-
-    $check=100000;
-    session()->put('check', $check);
    }else if($roomTypeName=='deluxe'){
-    $check=150000;
+
+    $check=80000;
+    session()->put('check', $check);
+   }else if($roomTypeName=='executive'){
+    $check=1200000;
     session()->put('check', $check);
    }else{
     echo "try again";
@@ -137,7 +137,7 @@ class StepOneController extends Controller
         // Redirect and pass the room data to the session
         return redirect('step2_book' )->with('rooms', $rooms->toArray())->with('check',$check);
     } else {
-        return 'error';
+        return '<script>alert("room not found go back  ")</script>';
         //redirect()->back()->withErrors('No rooms found for this room type.');
     }
 
